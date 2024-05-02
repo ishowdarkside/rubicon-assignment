@@ -1,0 +1,21 @@
+@import "../../styles/variables.scss";
+.btn {
+  padding: 1.2rem 1.6rem;
+  background-color: #fafafa;
+  color: #000;
+  border: 1px solid #ececec;
+  font-size: 1.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: $font-title;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.active {
+  color: #fff !important;
+  background-color: $color-primary !important;
+}

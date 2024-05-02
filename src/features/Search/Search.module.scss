@@ -1,0 +1,29 @@
+.searchWrapper {
+  position: relative;
+  input {
+    border: 1px solid #d1d1d1;
+    font-weight: 400;
+    padding: 1.2rem 1.6rem;
+    border-radius: 8px;
+    padding-left: 4rem;
+
+    &::placeholder {
+      color: #9a9a9a;
+    }
+  }
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+
+  input {
+    outline: none;
+    width: 100%;
+  }
+
+  svg {
+    left: 1rem;
+    position: absolute;
+  }
+}

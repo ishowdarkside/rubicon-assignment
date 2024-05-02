@@ -1,0 +1,62 @@
+@import "../../styles/variables.scss";
+
+.movieComponent {
+  padding: 2rem;
+  padding-bottom: 4rem;
+  border: 1px solid #e4e4e4;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  img {
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  }
+
+  svg {
+    font-size: 8rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.title {
+  display: block;
+  font-family: $font-title;
+  color: #17181c;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.rating {
+  display: block;
+  color: #f59e0b;
+}
+
+.ratingStar {
+  font-size: 1rem;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
+}
+
+.movieDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.date {
+  font-size: 1.4rem;
+}
