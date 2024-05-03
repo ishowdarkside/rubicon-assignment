@@ -9,7 +9,7 @@ export default function Movie() {
   const { data, isLoading } = useGetMovie();
   const navigate = useNavigate();
   if (isLoading) return <Spinner />;
-  console.log(data);
+
   if (!isLoading && !data)
     return (
       <div className={styles.noResults}>

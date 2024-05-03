@@ -23,13 +23,13 @@ export default function Pagination(): JSX.Element {
     setIsSearching(false);
   }
 
-  console.log(searchResponse);
   return (
     <div className={styles.paginationBlock}>
       {Array.from({ length: searchResponse?.total_pages || 1 }).map((_, i) => (
         <Button
           onClick={() => handleClick(i + 1)}
           isActive={searchResponse?.page === i + 1}
+          key={i}
         >
           {i + 1}
         </Button>
