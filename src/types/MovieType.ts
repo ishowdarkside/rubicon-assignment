@@ -21,6 +21,6 @@ export interface MovieType {
 export interface SearchQueryType {
   page: number;
   results: MovieType[];
-  total_page: number;
+  total_pages: number;
   total_results: number;
 }

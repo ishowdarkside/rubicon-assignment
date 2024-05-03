@@ -23,7 +23,7 @@ export default function MovieContext({
 }) {
   const [selectedResults, setSelectedResults] = useState("tv");
   const [searchQuery, setSearchQuery] = useState("");
-  const [isSearching, setIsSearching] = useState(true);
+  const [isSearching, setIsSearching] = useState(false);
   const [searchResponse, setSearchResponse] = useState<SearchQueryType | null>(
     null
   );

@@ -2,12 +2,14 @@ import ReactCountryFlag from "react-country-flag";
 import { MovieType } from "../../types/MovieType";
 import { format } from "date-fns";
 import { MdOutlineImageNotSupported } from "react-icons/md";
-
 import styles from "./MovieComponent.module.scss";
+import { useNavigate } from "react-router-dom";
+import { useMovieContext } from "../../context/MovieContext";
 
 const API_URL = `https://image.tmdb.org/t/p/w500`;
 
 export default function MovieComponent({ result }: { result: MovieType }) {
+  const { selectedResults } = useMovieContext();
   let formatDate;
   if (result.first_air_date || result.release_date)
     formatDate = format(
@@ -15,8 +17,12 @@ export default function MovieComponent({ result }: { result: MovieType }) {
       "MMMM d, yyyy"
     );
 
+  const navigate = useNavigate();
   return (
-    <div className={styles.movieComponent}>
+    <div
+      className={styles.movieComponent}
+      onClick={() => navigate(`/${selectedResults}/${result.id}`)}
+    >
       {!result.backdrop_path && <MdOutlineImageNotSupported />}
       {result.backdrop_path && (
         <img src={`${API_URL}${result.backdrop_path}`} alt="image" />

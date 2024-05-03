@@ -3,13 +3,13 @@ import styles from "./Button.module.scss";
 interface propTypes {
   children: React.ReactNode;
   onClick: () => void;
-  isActive: boolean;
+  isActive?: boolean;
 }
 
 export default function Button({
   children,
   onClick,
-  isActive,
+  isActive = false,
 }: propTypes): JSX.Element {
   return (
     <button

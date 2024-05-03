@@ -7,9 +7,6 @@ export default function Navbar(): JSX.Element {
       <div className={styles.container}>
         <h3>findmovie</h3>
         <Search />
-        <ul>
-          <li>Home</li>
-        </ul>
       </div>
     </nav>
   );

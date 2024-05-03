@@ -1,6 +1,17 @@
+@import "../../styles/variables.scss";
 .movieGrid {
   margin-top: 2.5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  padding-bottom: 3rem;
+  position: relative;
+}
+
+.noResults {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: $font-title;
 }

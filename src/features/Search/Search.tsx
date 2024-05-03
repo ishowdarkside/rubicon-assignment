@@ -17,12 +17,12 @@ export default function Search(): JSX.Element {
     if (searchQuery.length < 3) return setSearchResponse(null);
 
     async function searchFnc() {
-      setIsSearching(true);
       const data = await searchQueryService(selectedResults, searchQuery);
       setSearchResponse(data);
       setIsSearching(false);
     }
 
+    setIsSearching(true);
     const timeout = setTimeout(() => {
       searchFnc();
     }, 1000);
