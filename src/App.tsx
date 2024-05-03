@@ -5,6 +5,7 @@ import Homepage from "./pages/Homepage";
 import MovieContext from "./context/MovieContext";
 import Movie from "./pages/Movie";
 import Show from "./pages/Show";
+import NotFound from "./pages/NotFound";
 function App() {
   const client = new QueryClient();
 
@@ -36,6 +37,7 @@ function App() {
               </MovieContext>
             }
           />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
       <ReactQueryDevtools initialIsOpen={false} />

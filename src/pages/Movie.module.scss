@@ -1,4 +1,5 @@
 @import "../styles/variables.scss";
+@import "../styles/mixins.scss";
 
 .noResults {
   position: absolute;
@@ -6,6 +7,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
+  text-align: center;
   flex-direction: column-reverse;
   align-items: center;
   gap: 5rem;
@@ -14,5 +16,9 @@
   h3 {
     font-family: $font-title;
     font-size: 5rem;
+
+    @include responsive("tab-port") {
+      font-size: 3rem;
+    }
   }
 }

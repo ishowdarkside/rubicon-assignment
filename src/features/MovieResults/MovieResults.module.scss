@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
 .movieGrid {
   margin-top: 2.5rem;
   display: grid;
@@ -6,6 +7,14 @@
   gap: 2rem;
   padding-bottom: 3rem;
   position: relative;
+
+  @include responsive("tab-port") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include responsive-custom(34.37em) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .noResults {

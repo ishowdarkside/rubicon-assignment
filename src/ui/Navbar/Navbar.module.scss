@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
 
 .nav {
   padding: 3rem 0;
@@ -18,8 +19,21 @@
     justify-content: space-between;
     align-items: center;
     gap: 10rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     & > * {
       flex-grow: 1;
+    }
+
+    @include responsive("mobile") {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 4rem;
+      & > * {
+        width: 100%;
+      }
     }
   }
 }

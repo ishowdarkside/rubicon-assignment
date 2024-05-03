@@ -5,7 +5,7 @@ export default function SkeletonLoading(): JSX.Element {
 
   return (
     <>
-      {arr.map((e, i) => (
+      {arr.map((_, i) => (
         <SkeletonItem key={i} />
       ))}
     </>
